@@ -226,7 +226,7 @@ def get_process(options):
     gcc_s_data = 'gcc-pp.c'
     gcc_s.cmd = [gcc_s.executable] + [gcc_s_data,'-O5',
 	'-finline-limit=24000','-fgcse','-fgcse-las',
-    	'-fgcse-lm','-fgcse-sm','-o',
+	'-fgcse-lm','-fgcse-sm','-o',
 	'gcc-pp.opts-O5_-finline-limit_24000_-fgcse_-fgcse-las_-fgcse-lm_-fgcse-sm.s']
     gcc_s.output = 'gcc-pp.opts-O5_-finline-limit_24000_-fgcse_-fgcse-las_-fgcse-lm_-fgcse-sm.out'
     gcc_s.cwd = bench_dir_17 + gcc_s_run_dir
@@ -277,7 +277,8 @@ def get_process(options):
     deepsjeng_s = Process()
     deepsjeng_s_dir = '631.deepsjeng_s/'
     deepsjeng_s_run_dir = deepsjeng_s_dir + refspeed_run_dir
-    deepsjeng_s.executable = bench_dir_17 + deepsjeng_s_run_dir + 'deepsjeng_s' + exe_suffix
+    deepsjeng_s.executable = bench_dir_17 +\
+	 deepsjeng_s_run_dir + 'deepsjeng_s' + exe_suffix
     deepsjeng_s_data = 'ref.txt'
     deepsjeng_s.cmd = [deepsjeng_s.executable] + [deepsjeng_s_data]
     deepsjeng_s.output = 'ref.out'
@@ -287,7 +288,8 @@ def get_process(options):
     leela_s = Process()
     leela_s_dir = '641.leela_s/'
     leela_s_run_dir = leela_s_dir + refspeed_run_dir
-    leela_s.executable = bench_dir_17 + leela_s_run_dir + 'leela_s' + exe_suffix
+    leela_s.executable = bench_dir_17 + leela_s_run_dir\
+	 + 'leela_s' + exe_suffix
     leela_s_data = 'ref.sgf'
     leela_s.cmd = [leela_s.executable] + [leela_s_data]
     leela_s.output = output_dir + 'ref.out'
@@ -297,7 +299,8 @@ def get_process(options):
     exchange2_s = Process()
     exchange2_s_dir = '648.exchange2_s/'
     exchange2_s_run_dir = exchange2_s_dir + refspeed_run_dir
-    exchange2_s.executable = bench_dir_17 + exchange2_s_run_dir + 'exchange2_s' + exe_suffix
+    exchange2_s.executable = bench_dir_17 + exchange2_s_run_dir +\
+	 'exchange2_s' + exe_suffix
     # no data
     exchange2_s.cmd = [exchange2_s.executable] + ['6']
     exchange2_s.output = 'exchange2.txt'
@@ -311,7 +314,6 @@ def get_process(options):
     xz_s_data = 'cld.tar.xz'
     #xz_s_data = 'cpu2006docs.tar.xz'
     #xz_s.cmd = [xz_s.executable] + [xz_s_data,'6643',
-    #    '055ce243071129412e9dd0b3b69a21654033a9b723d874b2015c774fac1553d9713be561ca86f74e4f16f22e664fc17a79f30caa5ad2c04fbc447549c2810fae',
     #    '1036078272','1111795472','4']
     xz_s.cmd = [xz_s.executable] + [xz_s_data, '1400', '19cf30ae51eddcbefda78dd06014b4b96281456e078ca7c13e1c0c9e6aaea8dff3efb4ad6b0456697718cede6bd5454852652806a657bb56e07d61128434b474', '536995164', '539938872', '8']
     xz_s.output = 'cpu2006docs.tar-6643-4.out'
