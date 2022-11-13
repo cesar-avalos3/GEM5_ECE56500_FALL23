@@ -65,12 +65,13 @@ def get_process(options):
     # ARM binary path
     bench_dir_06='/home/min/a/ece565/benchspec-2020/CPU2006/'
     exe_dir_06='/home/min/a/ece565/benchspec-2020/CPU2006/'
-    exe_suffix = '_base.amd64-armcross'
+    #exe_suffix = '_base.amd64-armcross'
 
     ### SPEC 2017
     # X86 binaries
-    output_dir = 'do not use'
-    bench_dir_17 = 'do not use'
+    output_dir = '/home/yara/mithuna2/gem5-Fall2022/tmp'
+    bench_dir_17 = '/home/yara/mithuna2/green456/SPEC-OSG-2021/SPEC_2017/benchspec/CPU/'
+    exe_suffix = '_base.spectre_safebet-m64'
 
     # refrate process definitions unfinished (3 were started)
     refrate_run_dir = 'run/run_base_refrate_spectre_safebet-m64.0000/'
