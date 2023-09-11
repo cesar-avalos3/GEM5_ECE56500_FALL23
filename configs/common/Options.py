@@ -125,7 +125,7 @@ def addNoISAOptions(parser):
     parser.add_argument("--mem-ranks", type=int, default=None,
                         help="number of memory ranks per channel")
     parser.add_argument(
-        "--mem-size", action="store", type=str, default="512MB",
+        "--mem-size", action="store", type=str, default="8GB",
         help="Specify the physical memory size (single memory)")
     parser.add_argument("--enable-dram-powerdown", action="store_true",
                         help="Enable low-power states in DRAMInterface")

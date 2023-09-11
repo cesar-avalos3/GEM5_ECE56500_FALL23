@@ -52,7 +52,7 @@ from m5.objects import Process, buildEnv
 
 m5.util.addToPath('../common')
 
-def get_process(options):
+def get_process(options, target_isa="arm"):
 
     # default
     process = Process()
@@ -65,13 +65,14 @@ def get_process(options):
     # ARM binary path
     bench_dir_06='/home/min/a/ece565/benchspec-2020/CPU2006/'
     exe_dir_06='/home/min/a/ece565/benchspec-2020/CPU2006/'
-    #exe_suffix = '_base.amd64-armcross'
+    exe_suffix = '_base.amd64-armcross'
+    if("x86" in target_isa):
+      exe_suffix = '_base.amd64-m64-gcc43-nn'
 
     ### SPEC 2017
     # X86 binaries
-    output_dir = '/home/yara/mithuna2/gem5-Fall2022/tmp'
-    bench_dir_17 = '/home/yara/mithuna2/green456/SPEC-OSG-2021/SPEC_2017/benchspec/CPU/'
-    exe_suffix = '_base.spectre_safebet-m64'
+    output_dir = 'do not use'
+    bench_dir_17 = 'do not use'
 
     # refrate process definitions unfinished (3 were started)
     refrate_run_dir = 'run/run_base_refrate_spectre_safebet-m64.0000/'

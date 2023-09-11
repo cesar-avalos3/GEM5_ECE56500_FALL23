@@ -139,7 +139,7 @@ args.redirects = ['/lib64=/package/gcc/8.3.0/lib64']
 multiprocesses = []
 numThreads = 1
 
-process = spec2k6_spec2k17.get_process(args)
+process = spec2k6_spec2k17.get_process(args, buildEnv['TARGET_ISA'])
 multiprocesses.append(process)
 
 # if args.bench:
