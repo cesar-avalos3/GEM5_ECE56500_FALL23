@@ -532,11 +532,10 @@ def get_process(options, target_isa="arm"):
     astar_dir='473.astar/'
     astar.executable = exe_dir_06+astar_dir+\
         'exe/astar' + exe_suffix
-    data= bench_dir_06+astar_dir+'/data/ref/input/rivers.cfg'
+    data= bench_dir_06+astar_dir+'/data/test/input/lake.cfg'
     astar.cmd = [astar.executable]+[data]
-    astar.cwd = bench_dir_06+astar_dir+'run'
+    astar.cwd = bench_dir_06+astar_dir+'/data/test/input/'
     astar.output = 'lake.out'
-
 
     #481.wrf
     wrf=Process()
