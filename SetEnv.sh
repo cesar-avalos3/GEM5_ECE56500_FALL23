@@ -1,3 +1,6 @@
+## usage: source SetEnv.sh
+## then: ex. build_arm
+
 export LD_LIBRARY_PATH="/package/gcc/8.3.0/lib64"
 export PATH="/package/gcc/8.3.0/bin:$PATH"
 
