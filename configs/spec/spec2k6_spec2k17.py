@@ -52,6 +52,12 @@ from m5.objects import Process, buildEnv
 
 m5.util.addToPath('../common')
 
+def check_spec2k17(options):
+    sp = ["s", "fs", "is", "r"]
+    if any("_"+x in options.benchmark for x in sp):
+       return True
+    return False
+
 def get_process(options, target_isa="arm"):
 
     # default
@@ -71,8 +77,11 @@ def get_process(options, target_isa="arm"):
 
     ### SPEC 2017
     # X86 binaries
-    output_dir = 'do not use'
-    bench_dir_17 = 'do not use'
+    output_dir = '/tmp/'
+    bench_dir_17 = '/home/yara/mithuna2/green456/benchmark_sources/'\
+                   'SPEC-OSG-2021/SPEC_2017/benchspec/CPU/'
+    if(check_spec2k17(options)):
+      exe_suffix = '_base.spectre_safebet-m64'
 
     # refrate process definitions unfinished (3 were started)
     refrate_run_dir = 'run/run_base_refrate_spectre_safebet-m64.0000/'
